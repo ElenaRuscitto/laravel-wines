@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('winery', 50);
             $table->string('wine', 100);
             $table->decimal('rating_average', 2, 1);
-            $table->smallInteger('rating_reviews');
+            $table->string('rating_reviews');
             $table->string('location');
             $table->string('image');
             $table->timestamps();

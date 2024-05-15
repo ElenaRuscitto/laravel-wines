@@ -9,7 +9,9 @@ use App\Models\Wine;
 class PageController extends Controller
 {
     public function index(){
-        return view('home');
+        $wines = Wine::All();
+        $wines = Wine::paginate(8);
+        return view('home', compact('wines'));
     }
 
     public function nuovaPagina(){

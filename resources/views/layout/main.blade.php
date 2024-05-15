@@ -22,7 +22,7 @@
         @include('partials.header')
 
 
-    <main>
+    <main class="bg-dark">
         @yield('content')
     </main>
 
@@ -32,3 +32,12 @@
 
 </body>
 </html>
+
+
+
+<style>
+    img{
+        max-height: 500px;
+        object-fit: contain
+    }
+</style>
