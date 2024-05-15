@@ -1,11 +1,6 @@
 @extends('layout.main')
 
 
-
-
-
-
-
 @section('content')
 
 <div class="container d-flex flex-wrap justify-content-center ">
