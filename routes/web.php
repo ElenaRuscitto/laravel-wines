@@ -13,15 +13,7 @@ use App\Http\Controllers\Guest\PageController;
 |
 */
 
-Route::get('/', [PageController::class, 'index'] )->name('home');
+Route::get('/', [PageController::class, 'index'] )->name('home-wine');
 
-
-// Route::get('/', function () {
-//     return view('home');
-// })->name('home');
 
 Route::get('/nuova-pagina', [PageController::class, 'nuovaPagina'] )->name('nuova-pagina');
-
-// Route::get('/nuova-pag', function () {
-//     return view('nuova-pagina');
-// })->name('nuova-pagina');
