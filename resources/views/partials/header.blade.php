@@ -1,8 +1,22 @@
-<header>
+<header class="bg-danger">
 
-    <h1>Header</h1>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">I Nostri Vini</a>
 
-    <a href="{{route('home')}}">Home</a>
-    <a href="{{route('nuova-pagina')}}">Nuova Pagina</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+  </div>
+
 
 </header>
