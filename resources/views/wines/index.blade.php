@@ -6,6 +6,13 @@
 <div class="container">
 
         <div class="row row-cols-3 d-flex justify-content-center">
+
+            @if (session('delete'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('delete') }}
+                </div>
+            @endif
+
             <table class="table">
                 <thead>
                     <tr>
@@ -28,8 +35,8 @@
                         <td>{{$wine->location}}</td>
 
                         <td>
-                            <div class="d-flex ">
-                                <a class="btn btn-success " href="{{route('wines.show', $wine->id)}}"><i class="fa-solid fa-eye"></i></a>
+                            <div class="d-flex">
+                                <a class="btn btn-success" href="{{ route('wines.show', $wine->id) }}"><i class="fa-solid fa-eye"></i></a>
                                 <button class="btn btn-warning mx-2"><i class="fa-solid fa-pencil"></i></button>
 
                                 <form action="{{route('wines.destroy', $wine)}}"
@@ -54,6 +61,11 @@
             </div>
         </div>
 
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                {{ $wines->links('pagination::bootstrap-5') }}
+            </div>
+        </div>
 
 
 
