@@ -28,7 +28,7 @@
                         <td>
                             <div class="d-flex">
                                 <a class="btn btn-success" href="{{ route('wines.show', $wine->id) }}"><i class="fa-solid fa-eye"></i></a>
-                                <button class="btn btn-warning mx-2"><i class="fa-solid fa-pencil"></i></button>
+                                <a class="btn btn-warning mx-2" href="{{ route('wines.edit', $wine->id) }}"><i class="fa-solid fa-pencil"></i></a>
 
                                 <form action="{{ route('wines.destroy', $wine) }}" method="POST">
                                     @csrf

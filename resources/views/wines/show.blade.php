@@ -10,7 +10,7 @@
             <div class="col-8">
                 <h1>{{ $wine->wine }}</h1>
                 <p>{{ $wine->winery }}</p>
-                <p>{{ $wine->rating_avarega }}</p>
+                <p>{{ $wine->rating_average }}</p>
                 <p>{{ $wine->rating_reviews }}</p>
                 <p>{{ $wine->location }}</p>
             </div>
