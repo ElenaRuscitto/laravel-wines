@@ -5,92 +5,44 @@
 
     <div class="container">
 
+        <div class="row row-cols-3 d-flex justify-content-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome Vino</th>
+                        <th scope="col">Cantina</th>
+                        <th scope="col">Voto Medio</th>
+                        <th scope="col">Voti Totali</th>
+                        <th scope="col">Paese di origine</th>
+                        <th scope="col">Azione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($wines as $wine)
+                    <tr>
+                        <td>{{ $wine->wine }}</td>
+                        <td>{{ $wine->winery }}</td>
+                        <td>{{ $wine->rating_average }}</td>
+                        <td>{{ $wine->rating_reviews }}</td>
+                        <td>{{ $wine->location }}</td>
+                        <td>
+                            <div class="d-flex">
+                                <a class="btn btn-success" href="{{ route('wines.show', $wine->id) }}"><i class="fa-solid fa-eye"></i></a>
+                                <button class="btn btn-warning mx-2"><i class="fa-solid fa-pencil"></i></button>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        </tr>
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h1 class="text-center text-white py-5">BEST SELLER</h1>
-
-        <div class="row  row-cols-3 d-flex  justify-content-center ">
-            @foreach ($wines as $wine )
-                <div class="card d-flex col-4 bg-light m-3 mb-5" style="width: 18rem;">
-
-                    <div class="m-3">
-                        <img src="{{$wine->image}}" class="card-img-top h-100" alt="...">
-                    </div>
-
-                    <div class="card-body">
-                        <h5 class="card-title">{{$wine->wine}}</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">{{$wine->winery}}</h6>
-                        <p class="card-text">{{$wine->rating_average}}</p>
-                        <p class="card-text">{{$wine->rating_reviews}}</p>
-                        <p class="card-text">{{$wine->location}}</p>
-                    </div>
-
-                </div>
-            @endforeach
+                                <form action="{{ route('wines.destroy', $wine) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                {{ $wines->links('pagination::bootstrap-5') }}
-            </div>
-        </div>
 
     </div>
 
