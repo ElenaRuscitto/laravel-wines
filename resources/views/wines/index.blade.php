@@ -6,6 +6,13 @@
     <div class="container">
 
         <div class="row row-cols-3 d-flex justify-content-center">
+
+            @if (session('delete'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('delete') }}
+                </div>
+            @endif
+
             <table class="table">
                 <thead>
                     <tr>
