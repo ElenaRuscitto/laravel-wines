@@ -143,7 +143,7 @@
 
         <div>
             <button class="btn btn-success" type="submit">Edit Wine</button>
-            <button class="btn btn-danger" type="reset">Reset</button>
+
         </div>
 </div>
 
