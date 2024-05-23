@@ -5,33 +5,20 @@
 
 <div class="container">
 
-    <h1 class="text-center text-white py-5">BEST SELLER</h1>
-    @if(session('delete'))
-        <div class="alert alert-success" role="alert">
-            {{session('delete')}}
-        </div>
-    @endif
-
-
-
-    <div class="row  row-cols-3 d-flex  justify-content-center ">
-
-
-        <table class="table">
-            <thead>
-
-              <tr>
-
-                <th scope="col">Nome Vino</th>
-                <th scope="col">Cantina</th>
-                <th scope="col">Voto medio</th>
-                <th scope="col">Voti tot.</th>
-                <th scope="col">Paese di Origine</th>
-                <th scope="col">Azioni</th>
-              </tr>
-            </thead>
-            <tbody>
-                @foreach ($wines as $wine )
+        <div class="row row-cols-3 d-flex justify-content-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome Vino</th>
+                        <th scope="col">Cantina</th>
+                        <th scope="col">Voto Medio</th>
+                        <th scope="col">Voti Totali</th>
+                        <th scope="col">Paese di origine</th>
+                        <th scope="col">Azione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($wines as $wine)
                     <tr>
 
                         <td>{{$wine->wine}}</td>
