@@ -64,6 +64,6 @@ class WinesController extends Controller
     {
         $wine->delete();
 
-        return redirect()->route('wines.index')->with('delete', 'Il vino' . $wine->title  . 'è stato eliminato');
+        return redirect()->route('wines.index')->with('delete', 'Il vino ' . $wine->wine  . ' è stato eliminato');
     }
 }

@@ -6,6 +6,13 @@
 <div class="container">
 
     <h1 class="text-center text-white py-5">BEST SELLER</h1>
+    @if(session('delete'))
+        <div class="alert alert-success" role="alert">
+            {{session('delete')}}
+        </div>
+    @endif
+
+
 
     <div class="row  row-cols-3 d-flex  justify-content-center ">
 
