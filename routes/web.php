@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\PageController;
-use App\Http\Controllers\WinesController;
+use App\http\Controllers\WinesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

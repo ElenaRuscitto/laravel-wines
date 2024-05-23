@@ -10,7 +10,7 @@
             <h4 class="">Cantina: {{$wine->winery}}</h4>
             <p class="">Voto medio: {{$wine->rating_average}}</p>
             <p class="">Voti tot: {{$wine->rating_reviews}}</p>
-            <h6 class="">Paese di Origine: {{$wine->location}}</h6>
+            <p class="">Paese di Origine: {{$wine->location}}</p>
         </div>
         <div class="ms-5">
             <img src="{{$wine->image}}" alt="">
