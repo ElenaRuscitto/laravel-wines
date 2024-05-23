@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function index(){
         $wines = Wine::All();
-        $wines = Wine::paginate(8);
+
         return view('home', compact('wines'));
     }
 
