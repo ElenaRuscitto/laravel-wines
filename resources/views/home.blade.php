@@ -24,39 +24,39 @@
             @endforeach
         </div>
 
-        <h2 class="text-center my-5">I Nostri Servizi</h2>
+        <h2 class="text-center my-5 text-white">I Nostri Servizi</h2>
         <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center text-white">
                 <i class="fa fa-truck fa-3x mb-3" aria-hidden="true"></i>
                 <h4>Consegna Veloce</h4>
                 <p>Consegna rapida e sicura direttamente a casa tua.</p>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center text-white">
                 <i class="fa fa-glass fa-3x mb-3" aria-hidden="true"></i>
                 <h4>Degustazioni</h4>
                 <p>Organizziamo degustazioni per farti scoprire nuovi sapori.</p>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center text-white">
                 <i class="fa fa-users fa-3x mb-3" aria-hidden="true"></i>
                 <h4>Eventi</h4>
                 <p>Partecipa ai nostri eventi e incontra altri appassionati di vino.</p>
             </div>
         </div>
 
-        <h2 class="text-center my-5">Contattaci</h2>
+        <h2 class="text-center my-5 text-white">Contattaci</h2>
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3 ">
                 <form action="{{ route('wines.index') }}" method="POST">
                     @csrf
-                    <div class="form-group">
+                    <div class="form-group text-white">
                         <label for="name">Nome</label>
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group text-white">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group text-white">
                         <label for="message">Messaggio</label>
                         <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     </div>
