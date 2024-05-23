@@ -38,7 +38,10 @@
                                 <a class="btn btn-success " href="{{route('wines.show', $wine->id)}}"><i class="fa-solid fa-eye"></i></a>
                                 <button class="btn btn-warning mx-2"><i class="fa-solid fa-pencil"></i></button>
 
-                                <form action="">
+                                <form action="{{route('wines.destroy', $wine)}}"
+                                method="POST">
+                                @csrf
+                                @method('DELETE')
                                     <button class="btn btn-danger "><i class="fa-solid fa-trash-can"></i></button>
                                 </form>
                             </div>

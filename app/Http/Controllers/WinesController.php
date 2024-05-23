@@ -60,8 +60,10 @@ class WinesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Wine $wine)
     {
-        //
+        $wine->delete();
+
+        return redirect()->route('wines.index')->with('delete', 'Il vino' . $wine->title  . 'è stato eliminato');
     }
 }
