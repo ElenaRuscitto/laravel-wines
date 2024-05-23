@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-4 text-center text-white">
                 <i class="fa fa-glass fa-3x mb-3" aria-hidden="true"></i>
-                <h4>Degustazioni</h4>
+                <h4>Degustazioni!!</h4>
                 <p>Organizziamo degustazioni per farti scoprire nuovi sapori.</p>
             </div>
             <div class="col-md-4 text-center text-white">
